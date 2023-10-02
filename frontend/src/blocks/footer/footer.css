@@ -1,0 +1,27 @@
+.footer{
+    max-width: 880px;
+    width: 100%;
+    padding: 67px 0 60px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* @media screen and (max-width: 1279px){
+    .footer{
+        max-width: calc(100% - 48px*2);
+    }
+} */
+
+@media screen and (max-width: 879px){
+    .footer{
+        padding-top: 48px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 579px){
+    .footer{
+        max-width: calc(100% - 19px*2);
+    }
+}

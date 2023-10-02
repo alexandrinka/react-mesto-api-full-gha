@@ -1,0 +1,10 @@
+.elements__description{
+    box-sizing: border-box;
+    width: 282px;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 25px 15px 31px 21px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+}

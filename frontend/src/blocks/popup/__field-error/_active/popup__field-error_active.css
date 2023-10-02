@@ -1,0 +1,13 @@
+.popup__field-error_active {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #FF0000;
+    margin-bottom: 13px;
+    margin-top: 5px;
+}
+
+.popup__field-error_active:last-of-type {
+    margin-bottom: 31px;
+}

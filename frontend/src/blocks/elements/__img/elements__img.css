@@ -1,0 +1,9 @@
+.elements__img{
+    width: 282px;
+    height: 282px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+}

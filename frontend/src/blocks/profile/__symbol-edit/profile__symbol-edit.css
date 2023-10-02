@@ -1,0 +1,22 @@
+.profile__symbol-edit{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #FFFFFF;
+    margin-bottom: 7px;
+    margin-left: 22px;
+    cursor: pointer;
+    background: url('../../../images/edit.svg') no-repeat center;
+}
+
+.profile__symbol-edit:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 759px){
+    .profile__symbol-edit{
+        width: 18px;
+        height: 18px;
+        background-size: 7px;
+    }
+}
