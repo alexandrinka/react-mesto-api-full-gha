@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import celebrate from 'celebrate';
+import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import routes from './routes/index';
 import errorHandler from './middlewares/error-handler';
@@ -11,6 +12,7 @@ import { requestLogger, errorLogger } from './middlewares/logger';
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 app.use(helmet());
