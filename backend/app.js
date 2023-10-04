@@ -23,7 +23,6 @@ const limiter = rateLimit({
   standardHeaders: 'draft-7',
   legacyHeaders: false,
 });
-app.use(limiter);
 
 app.use(express.json());
 
@@ -34,6 +33,7 @@ app.get('/crash-test', () => {
   }, 0);
 });
 app.use(routes);
+app.use(limiter);
 app.use(errorLogger);
 
 app.use(celebrate.errors());

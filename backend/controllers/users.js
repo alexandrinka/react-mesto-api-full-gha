@@ -69,7 +69,7 @@ export const login = async (req, res, next) => {
     if (!result) throw new NotAutorization('Неправильный адрес электронной почты или пароль');
 
     const payload = { _id: user._id };
-    const token = jwt.sign(payload, '!q8AcиПььaqЙ', { expiresIn: '1w' });
+    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1w' });
 
     res.send({ token });
   } catch (err) {

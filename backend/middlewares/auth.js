@@ -9,7 +9,7 @@ const checkAuthentication = async (req, res, next) => {
     if (!authorization || !authorization.startsWith('Bearer ')) throw new NotAutorization('Не авторизован');
 
     const token = authorization.split(' ')[1];
-    const parsedToken = await jwt.verify(token, '!q8AcиПььaqЙ');
+    const parsedToken = await jwt.verify(token, process.env.JWT_SECRET);
 
     if (parsedToken) {
       req.user = {
