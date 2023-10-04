@@ -1,7 +1,7 @@
-import Card from '../models/Card.js';
-import NotFoundError from '../errors/not-found-err.js';
-import InvalidRequest from '../errors/invalid-request.js';
-import NoRight from '../errors/no-right.js';
+import Card from '../models/Card';
+import NotFoundError from '../errors/not-found-err';
+import InvalidRequest from '../errors/invalid-request';
+import NoRight from '../errors/no-right';
 
 export const getCards = async (req, res, next) => {
   try {
