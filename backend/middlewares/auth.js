@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import NotAutorization from '../errors/not-autorization';
+import NotAutorization from '../errors/not-autorization.js';
 
 const { JsonWebTokenError } = jwt;
 
