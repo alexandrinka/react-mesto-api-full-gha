@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api.alexa.nomoredomainsrocks.ru/';
 
 const _handleResponse = (res) => {
     return res.ok
