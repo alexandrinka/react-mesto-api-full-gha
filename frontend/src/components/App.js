@@ -35,6 +35,7 @@ function App() {
         setTokenState(token);
         setLoggedIn(true);
         setToken(token);
+        api._token = token;
     }
 
     const tokenCheck = () => {
@@ -44,10 +45,9 @@ function App() {
 
         auth.checkToken(token).then((res) => {
             if (res) {
-                console.log(res);
                 setLoggedIn(true);
                 navigate('/', { replace: true });
-                setEmail(res.data.email);
+                setEmail(res.email);
             }
         })
             .catch((err) =>
@@ -88,7 +88,7 @@ function App() {
     }
 
     function handleCardLike(card) {
-        const isLiked = card.likes.some(i => i._id === currentUser._id);
+        const isLiked = card.likes.some(id => id === currentUser._id);
 
         api.likeCard(card._id, isLiked).then((newCard) => {
             setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
