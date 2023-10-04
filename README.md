@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.122.96
 
-Frontend https://...
+Frontend [https://...](https://alexa.nomoredomainsrocks.ru/)https://alexa.nomoredomainsrocks.ru/
 
-Backend https://...
+Backend [https://...](https://api.alexa.nomoredomainsrocks.ru/)https://api.alexa.nomoredomainsrocks.ru/
