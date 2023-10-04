@@ -11,6 +11,6 @@
 
 IP-адрес 158.160.122.96
 
-Frontend(https://alexa.nomoredomainsrocks.ru/)https://alexa.nomoredomainsrocks.ru/
+Frontend https://alexa.nomoredomainsrocks.ru/
 
-Backend (https://api.alexa.nomoredomainsrocks.ru/)https://api.alexa.nomoredomainsrocks.ru/
+Backend https://api.alexa.nomoredomainsrocks.ru/
