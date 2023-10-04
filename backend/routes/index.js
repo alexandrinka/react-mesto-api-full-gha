@@ -2,9 +2,9 @@ import express from 'express';
 import { celebrate, Joi } from 'celebrate';
 import usersRoutes from './users';
 import cardsRoutes from './cards';
-import auth from '../middlewares/auth';
-import NotFoundError from '../errors/not-found-err';
-import { login, createUser } from '../controllers/users';
+import auth from '../middlewares/auth.js';
+import NotFoundError from '../errors/not-found-err.js';
+import { login, createUser } from '../controllers/users.js';
 
 const routes = express.Router();
 

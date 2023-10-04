@@ -1,10 +1,10 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import User from '../models/User';
-import NotFoundError from '../errors/not-found-err';
-import InvalidRequest from '../errors/invalid-request';
-import NotAutorization from '../errors/not-autorization';
-import UserAuthorized from '../errors/user-autorized';
+import User from '../models/User.js';
+import NotFoundError from '../errors/not-found-err.js';
+import InvalidRequest from '../errors/invalid-request.js';
+import NotAutorization from '../errors/not-autorization.js';
+import UserAuthorized from '../errors/user-autorized.js';
 
 export const getUsers = async (req, res, next) => {
   try {

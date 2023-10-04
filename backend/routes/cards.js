@@ -3,7 +3,7 @@ import { celebrate, Joi } from 'celebrate';
 
 import {
   createCard, deleteCardById, getCards, likeCard, dislikeCard,
-} from '../controllers/cards';
+} from '../controllers/cards.js';
 
 const usersRoutes = express.Router();
 
