@@ -5,11 +5,12 @@ const { JsonWebTokenError } = jwt;
 
 const checkAuthentication = async (req, res, next) => {
   try {
+    const { NODE_ENV, JWT_SECRET } = process.env;
     const { authorization } = req.headers;
     if (!authorization || !authorization.startsWith('Bearer ')) throw new NotAutorization('Не авторизован');
 
     const token = authorization.split(' ')[1];
-    const parsedToken = await jwt.verify(token, process.env.JWT_SECRET);
+    const parsedToken = await jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
 
     if (parsedToken) {
       req.user = {

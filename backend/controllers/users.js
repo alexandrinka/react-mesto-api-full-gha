@@ -59,6 +59,7 @@ export const createUser = async (req, res, next) => {
 
 export const login = async (req, res, next) => {
   try {
+    const { NODE_ENV, JWT_SECRET } = process.env;
     const { email, password } = req.body;
 
     if (!email || !password) throw new NotAutorization('Неправильный адрес электронной почты или пароль');
@@ -69,7 +70,7 @@ export const login = async (req, res, next) => {
     if (!result) throw new NotAutorization('Неправильный адрес электронной почты или пароль');
 
     const payload = { _id: user._id };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1w' });
+    const token = jwt.sign(payload, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '1w' });
 
     res.send({ token });
   } catch (err) {
